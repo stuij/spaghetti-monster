@@ -1,0 +1,81 @@
+Spaghetti-monster - The wrath of globals-non-believers
+
+A shoddy php site management toolkit by Ties Stuij
+
+** Introduction
+
+Spaghetti-monster started out as a forum but as the need grew it expanded into
+code to manage a whole site, and so it does a bit of everything: It's got
+support for a blog or individual blocks of text, all editable through a
+web-browser with what my friends coin `edit-in-place', so it's also got login
+and web-based admin functionality. It's got an rss spitter, an image resizer,
+image-uploading, some ajax stuff in comments and some other places, multiple
+language support through cookies and the command-line, a little last-posts
+tracker, a dbase-backed tree-structured site navigator, captcha
+protection... As a good programmer i'd really like to rewrite this stuff, since
+it was the first project i did of this magnitude and it is quite dirty,
+but it works quite ok on a number of websites, and i find it easy to modify if
+the need arises, so it's hard to find the motivation; and i'm a bit attached
+to this grumpy bear to tell the truth.
+
+Well, i had great fun writing this bundle of php scripts, and by all means, try
+to use them, but i didn't write them with a general end-user in mind, so be
+ware. But then it's name instills more fright than is justified. On a base level
+it's structured ok i guess; It's not really spaghetti-code, it's just a funny name;
+or is it?...
+
+
+** License - LGPL, see the included LICENSE file
+
+
+** installation
+
+To get the latest development version, do a darcs get:
+
+darcs get http://redrepublic.org/repos/spaghetti-monster
+
+I'm not planning to actually supporting this thing. It just feels like a
+shame to lock up code on which i've worked for quite a bit without it ever
+having tasted the fresh air of freedom. But if you do want to get it up and
+running, the least i can do is give a few pointers on configuration:
+
+- spaghetti-monster was written for php4. I didn't test on php5, but i wouldn't
+see why it wouldn't run, but then there are always these little caveats...
+
+- configure config.php in _lib/_base
+
+- add the tables at the top of _lib/_classes/zenSession.php and
+_lib/_classes/zenBlog.php and if you want to use it _lib/_classes/tree.php to
+your dbase.
+
+- change the yourname prefix in zenSession.php to your preferred prefix and edit
+the PREFIX constant in _lib/_base/config.php accordingly. Also change the
+SQLTABLE in config.php to reflect the table-name you substituted for the
+table-name in zenBlog.php.
+
+- there are initialInsert functions in zenSession.php and zenBlog.php use them
+once in one of your pages in the root dir to populate them.
+
+- configure the .htaccess file to point to the right directories
+
+- make the _img/public directory world-writable
+
+- the base site layout is to be found in _lib/_classes/skel.php, edit at your
+preference/leasure
+
+- css file to edit is to be found under _lib/_base/
+
+- add pages at your leasure using the templates in the base directory. Don't
+forget to update _lib/_classes/_skel.php to put your pages in the menu.
+
+- make an editable static item by clicking 'add new text block in [your language]'
+in your admin side-bar. Then populate the item, save it and click 'get textblocks'
+in the admin app. You'll see a number next to your item. enter that item in your
+showtext function in your preferred page (see _lib/_base/config.php and index.php
+for an example). It's a bit of a hackerish solution but a clean way of implementing
+this stuff would involve a lot more coding than my mere requirements would justify.
+
+- the tree-navigator code in _lib/_classes/tree.php might or might not work
+nowadays. I stopped using it.
+
+Have fun!

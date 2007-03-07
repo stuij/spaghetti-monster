@@ -1,0 +1,562 @@
+/* content containers */
+#fedora-middle-one, #fedora-middle-two, .fedora-middle-three {
+	font-size: 0.9em;
+	/* position: relative; */ /* relative to utilize z-index */
+/* 	width: auto; */
+/* 	min-width: 120px; */
+	margin: 10px;
+	z-index: 3; /* content can overlap when the browser is narrow */
+}
+#fedora-middle-two, .fedora-middle-three {
+	margin-left: 11em;
+	padding-left: 24px;
+}
+.fedora-middle-three {
+	margin-right: 13em;
+	padding-right: 24px;
+}
+
+
+.fedora-content {
+	padding: 24px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+
+.fedora-content-little {
+	padding: 5px;
+	padding-left: 15px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+
+.fedora-content > .fedora-corner-bottom { top: 0 }
+
+.fedora-corner-tl, .fedora-corner-tr, .fedora-corner-bl, .fedora-corner-br {
+	background-color: #98979c;
+	position: relative;
+	width: 19px;
+	height: 19px;
+	/* The following line is to render PNGs with alpha transparency within IE/Win, using DirectX */
+	/* Work-around for IE6/Mac borkage (Part 1) */
+	display: none;
+}
+
+.fedora-corner-tl, .fedora-corner-bl { float: left; left: 0px; }
+.fedora-corner-tr, .fedora-corner-br { float: right; right: 0px; }
+.fedora-corner-tl, .fedora-corner-tr { top: 0px; }
+.fedora-corner-bl, .fedora-corner-br { bottom: 0px; margin-top: -19px; /* Opera fix (part 1) */ top: -18px;}
+
+html>body .fedora-corner-tl { background: #98979c url("http://www.fallenfrukt.com/_img/corner-tl.png") no-repeat left top; }
+html>body .fedora-corner-tr { background: #98979c url("http://www.fallenfrukt.com/_img/corner-tr.png") no-repeat right top; }
+html>body .fedora-corner-bl { background: #98979c url("http://www.fallenfrukt.com/_img/corner-bl.png") no-repeat left bottom; }
+html>body .fedora-corner-br { background: #98979c url("http://www.fallenfrukt.com/_img/corner-br.png") no-repeat right bottom; }
+
+.fedora-corner-tl { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.fallenfrukt.com/_img/corner-tl.png',sizingMethod='scale'); }
+.fedora-corner-tr { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.fallenfrukt.com/_img/corner-tr.png',sizingMethod='scale'); }
+.fedora-corner-br { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.fallenfrukt.com/_img/corner-br.png',sizingMethod='scale'); }
+.fedora-corner-bl { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.fallenfrukt.com/_img/corner-bl.png',sizingMethod='scale'); }
+
+/* \*/
+.fedora-corner-tl, .fedora-corner-tr, .fedora-corner-bl, .fedora-corner-br {
+	/* Restore the view for everything but IE6/Mac (part 2 of the "IE/Mac fix") */
+	display: block;
+}
+/* */
+
+.fedora-corner-bl, .fedora-corner-br {
+	top: 0px;
+}
+
+
+
+pre {
+  border: 1px solid #d0d0d0;
+  padding: 0.5em;
+  background-color: #eeeeee;
+  margin-left: 0.25em;
+  overflow: auto;
+  }
+
+body 
+	{
+/*	background-color: #E9F3FF; */
+	background-color: #98979c;
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #000000;
+	text-decoration: none;
+	}
+	
+.left
+	{
+	vertical-align: top;
+	width: 30%;
+	padding-left: 6px;
+	}
+	
+
+.main
+	{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+/* 	width:70%; */
+	}
+
+.right
+	{
+	}
+
+.padding
+	{
+	padding: 5%;
+	}
+	
+.all
+	{
+	width:100%;
+	}
+	
+.blockyFont
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	}
+	
+.blockyStuff
+	{
+/* 	font: 20px verdana, geneva, arial, sans-serif; */
+	text-align: center;
+	width: 100%;
+
+	padding: 5px;
+	border-color: #998377;
+	background-color: white;
+	vertical-align: top;
+	}
+	
+.newsTop	
+	{
+	border-top: 1px solid;
+	border-color: #998377;
+	padding-top: 5px;
+	margin-top: 0px;
+	}
+
+.lisp	
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #1c144b;
+	text-align: center;
+	width: 100%;
+	}
+	
+.news	
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	}
+	
+.bottom	
+	{
+	border-bottom: 1px solid;
+	border-color: #998377;
+	}
+	
+.top
+	{
+	border-top: 1px solid;
+	border-color: #998377;
+	}
+	
+.blockyPager
+	{
+/* 	font: 20px verdana, geneva, arial, sans-serif; */
+	text-align: center;
+	width: 100%;
+	background-color: white;
+	color: black;
+	}
+
+.blockyPager2
+	{
+	text-align: center;
+	width: 100%;
+	background-color: #b8b8b8;
+	color: black;
+	}
+
+.mainHeader
+	{
+	font: 20px verdana, geneva, arial, sans-serif;
+	text-align: center;
+	padding: 1px;
+	color: black;
+	padding: 5px;
+	border-color: #98979c;
+	border: 1px solid;
+	background-color: white;
+	vertical-align: top;
+	position: relative;
+	top: 50px;
+	}
+
+/* voor tree */
+
+
+.trigger {
+	cursor: pointer;
+	cursor: hand;
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	}
+	
+.trigger-diff {
+	cursor: pointer;
+	cursor: hand;
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #000000;
+	}
+	
+.branch {
+	display: none;
+	font: 12px verdana, geneva, arial, sans-serif;
+	margin-left: 16px;
+
+}
+
+/*  forum classes */
+.postPost
+	{
+	display: block;
+	color: #000000;
+	border: 1px solid;
+	border-color: #000000;
+	padding: 10px;
+	background-color: #98979c;
+/* 	background-color: #c0a495; */
+	}
+	
+.pages
+	{
+	display: block;
+	font: 10px verdana, geneva, arial, sans-serif;
+	}
+
+.postTable
+	{
+	width: 100%;
+	}
+
+.postTopRow
+	{
+	background-color: #000000;
+	}
+		
+.postSubmitter
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	padding: 3px;
+	vertical-align: top;
+	color: black;
+	background-color: white;
+	}
+	
+.postDateTime
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	padding: 3px;
+	text-align: right;
+	color: black;
+	background-color: white;
+	}
+	
+.postLeftBody
+	{
+	padding: 5px;
+	vertical-align: bottom;
+	background-color: #98979c;
+	}
+
+.postRightBody
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	padding: 5px;
+	vertical-align: top;
+	width: 80%;
+	color: black;
+	background-color: #98979c;
+	}
+	
+/* threadMarkup */
+.threadTable
+	{
+	border-left: 4px solid white;
+	border-right:4px solid white;
+/*  	width: 100%; */
+	background-color: #ffffff;
+	}
+	
+.threadTitle
+	{
+	padding: 2px;
+	text-decoration: none;
+	font: 18px verdana, geneva, arial, sans-serif;
+	}
+	
+.threadBody
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	padding-left: 15px;
+	border: 1px solid #998377;
+	padding-right: 15px;
+	padding-top: 17px;
+	padding-bottom: 14px;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: black;
+	width: 100%;
+	}
+	
+.threadCreatedDate
+	{
+	padding: 3px;
+	text-align: right;
+	font: 12px verdana, geneva, arial, sans-serif;
+		width: 40%
+	} 
+
+.threadPosted
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	padding: 0px; 
+	text-align: center;
+	border: 1px solid;
+	border-color: white;
+	}
+	
+b, strong 
+	{
+	font-weight: bold;
+	}
+
+a:active
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	text-decoration: none;
+	} 
+
+a:link
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+	
+a:visited
+	{
+	font: 12px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+
+a:hover 
+	{
+	color: #000000;
+	}
+
+
+a.threadTitle:active
+	{
+	font: 18px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+
+a.threadTitle:link
+	{
+	color: #998377;
+	text-decoration: none;
+	font: 18px verdana, geneva, arial, sans-serif;
+	}
+
+		
+a.threadTitle:visited
+	{
+	font: 18px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+	
+a.threadTitle:hover
+	{
+	color: #000000;
+	}
+
+a.body:active
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	text-decoration: none;
+	} 
+
+a.body:link
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+	
+a.body:visited
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	color: #998377;
+
+	text-decoration: none;
+	}
+
+a.body:hover 
+	{
+	color: #000000;
+	}
+	
+	
+a.thisPage:active
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	color: #000000;
+	text-decoration: none;
+	}
+
+a.thisPage:link
+	{
+	color: #000000;
+	text-decoration: none;
+	font: 14px verdana, geneva, arial, sans-serif, bold;
+	}
+
+		
+a.thisPage:visited
+	{
+	font: 14px verdana, geneva, arial, sans-serif, bold;
+	color: #000000;
+	text-decoration: none;
+	}
+	
+a.thisPage:hover
+	{
+	color: #000000;
+	}
+
+a.altLink:active
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+
+a.altLink:link
+	{
+	color: #998377;
+	text-decoration: none;
+	font: 12px verdana, geneva, arial, sans-serif;
+	}
+
+		
+a.altLink:visited
+	{
+	color: #998377;
+	text-decoration: none;
+	font: 12px verdana, geneva, arial, sans-serif;
+	}
+	
+a.altLink:hover
+	{
+	color: #000000;
+	}
+
+a.postLink:active
+	{
+	font: 14px verdana, geneva, arial, sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+	}
+
+a.postLink:link
+	{
+	color: #ffffff;
+	text-decoration: none;
+	font: 14px verdana, geneva, arial, sans-serif;
+	}
+
+		
+a.postLink:visited
+	{
+	color: #ffffff;
+	text-decoration: none;
+	font: 14px verdana, geneva, arial, sans-serif;
+	}
+	
+a.postLink:hover
+	{
+	color: #000000;
+	}
+
+.thisPage
+	{
+	color: #000000;
+	text-decoration: none;
+	font: 14px verdana, geneva, arial, sans-serif;
+	}
+	
+	
+a.thisMenuPage:active
+	{
+	font: 20px verdana, geneva, arial, sans-serif;
+	color: #000000;
+	text-decoration: none;
+	}
+
+a.thisMenuPage:link
+	{
+	color: #000000;
+	text-decoration: none;
+	font: 20px verdana, geneva, arial, sans-serif, bold;
+	}
+
+		
+a.thisMenuPage:visited
+	{
+	font: 20px verdana, geneva, arial, sans-serif, bold;
+	color: #000000;
+	text-decoration: none;
+	}
+	
+a.thisMenuPage:hover
+	{
+	color: #000000;
+	}
+	
+a.menu:active
+	{
+	font: 20px verdana, geneva, arial, sans-serif;
+	color: #998377;
+	text-decoration: none;
+	}
+
+a.menu:link
+	{
+	color: #998377;
+	text-decoration: none;
+	font: 20px verdana, geneva, arial, sans-serif, bold;
+	}
+
+		
+a.menu:visited
+	{
+	font: 20px verdana, geneva, arial, sans-serif, bold;
+	color: #998377;
+	text-decoration: none;
+	}
+	
+a.menu:hover
+	{
+	color: #000000;
+	}
